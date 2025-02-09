@@ -1,0 +1,177 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #FFC0CB; /* More vibrant pinks */
+    font-family: 'Arial', sans-serif;
+    flex-direction: column;
+    overflow: hidden; /* Add this to prevent scrolling */
+    position: fixed; /* Add this to lock the viewport */
+    width: 100%; /* Ensure full width */
+    top: 0;
+    left: 0;
+}
+  
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+  
+h1 {
+    font-size: 2.5em;
+    color: #f44336;
+}
+  
+.buttons {
+    margin-top: 20px;
+}
+  
+.yes-button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.no-button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.gif_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.x1 {
+    left: 5%;
+    transform: scale(0.9);
+    opacity: 0.6;
+    animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x2 {
+    left: 25%;
+    transform: scale(0.6);
+    opacity: 0.9;
+    animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+}
+
+.x3 {
+    left: 55%;
+    transform: scale(0.8);
+    opacity: 0.8;
+    animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x4 {
+    left: 72%;
+    transform: scale(0.75);
+    opacity: 0.9;
+    animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+}
+
+.x5 {
+    left: 88%;
+    transform: scale(0.8);
+    opacity: 0.3; 
+    animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+}
+
+.x6 {
+    left: 33%;
+    opacity: 1; 
+    animation: moveclouds 10s linear infinite, swayWays 9s ease-in-out infinite alternate;
+}
+
+@keyframes moveclouds { 
+    0% { 
+        top: 100vh;
+    }
+    100% { 
+        top: -10vh;
+    }
+}
+
+@keyframes sideWays { 
+    0% { 
+        margin-left: 0px;
+    }
+    100% { 
+        margin-left: 50px;
+    }
+}
+
+@keyframes swayWays {
+    0% {
+        transform: rotate(12deg);
+        left: -0.3%;
+    }
+    33% {
+        transform: rotate(-2deg);
+        left: 0.7%;
+    }
+    100% {
+        transform: rotate(0deg);
+        left: -12%;
+    }
+}
+
+.altheart {
+    background: url(http://static.indigoimages.ca/2016/shop/113439_img25_twotoneheart.png) no-repeat center;
+    width: 24px;
+    height: 21px;
+    position: relative;
+    display: block;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 10px;
+    pointer-events: none;
+    opacity: 0.7;
+}
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 18px;
+    top: 0;
+    width: 18px;
+    height: 30px;
+    background: #CC2022;
+    border-radius: 30px 30px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
